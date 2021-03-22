@@ -1,0 +1,4 @@
+Design a Parking Lot System
+  
+
+Reference : https://www.educative.io/courses/grokking-the-object-oriented-design-interview/gxM3gRxmr8Z
