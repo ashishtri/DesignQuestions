@@ -57,10 +57,11 @@ You can choose synchronous (at the same time as the changes to the main database
 
 Replication of data solves the availability issue but it doesn’t solve the throughput and latency issues (speed). 
 In those cases, you need to shard your database which simply means ‘chunking down’ or partitioning your data records and storing those records across multiple machines. So sharding data breaks your huge database into smaller databases. 
+There are mainly two ways to shard your database- horizontal sharding and vertical sharding. In vertical sharding, you take each table and put each table into a new machine. So if you have a user table, a tweets table, a comments table, a user supports table then each of these will be in different machines. Now, what if you have a single tweet table and it is very large? In that case, you can use horizontal sharding where you take a single table and you split that across multiple machines. You can take some sort of key like user ID and you can break the data into pieces and then you can allocate data to different machines.
 
 
 
-
+![image](https://user-images.githubusercontent.com/37074584/113473320-98803680-9486-11eb-86b9-753c808ae065.png)
 
 
 
