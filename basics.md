@@ -1,7 +1,4 @@
-                                                               **Common System Design Concepts**
-
-
-
+**Common System Design Concepts**
 
     Load Balancer:
 
