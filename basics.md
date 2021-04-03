@@ -1,4 +1,6 @@
-**load balancer:**
+                                                                       **Common System Design Concepts**
+                                                                       
+**h1.Load Balancer:**
 In a system, a server has a certain amount of capacity to handle the load or request from users. If a server receives a lot of requests simultaneously more than it’s capacity than the throughput of the server gets reduced and it can slow down. Also, it can be failed (no availability) if it continues for a longer period. You can add more servers (**horizontal scaling)** and resolve this issue by distributing the number of requests among these servers. Now the question is who is going to take ownership of distributing the request and balancing the load. Who is going to decide which request should be allocated to which server to ease the burden of a single server? Here comes the role of the load balancer. 
 
 A load balancer’s job is to distribute traffic to many different servers to help with **throughput, performance, latency, and scalability.** You can put the load balancer in front of the clients (it can be also inserted to other places) and then the load balancer will route the incoming request across multiple web servers. In short, load balancers are traffic managers and they take responsibility for the availability and throughput of the system. Nginx, Cisco, TP-Link, Barracuda, Citrix, Elastic Load Balancing from AWS…these are some popular load balancers available in the market. 
@@ -58,7 +60,7 @@ You can choose synchronous (at the same time as the changes to the main database
 Replication of data solves the availability issue but it doesn’t solve the throughput and latency issues (speed). 
 In those cases, you need to shard your database which simply means ‘chunking down’ or partitioning your data records and storing those records across multiple machines. So sharding data breaks your huge database into smaller databases. 
 There are mainly two ways to shard your database- horizontal sharding and vertical sharding. In vertical sharding, you take each table and put each table into a new machine. So if you have a user table, a tweets table, a comments table, a user supports table then each of these will be in different machines. Now, what if you have a single tweet table and it is very large? In that case, you can use horizontal sharding where you take a single table and you split that across multiple machines. You can take some sort of key like user ID and you can break the data into pieces and then you can allocate data to different machines.
-
+Now, what if you have a single tweet table and it is very large? In that case, you can use horizontal sharding where you take a single table and you split that across multiple machines. You can take some sort of key like user ID and you can break the data into pieces and then you can allocate data to different machines. So horizontal partitioning depends on one key which is an attribute of the data you’re storing to partition data. 
 
 
 ![image](https://user-images.githubusercontent.com/37074584/113473320-98803680-9486-11eb-86b9-753c808ae065.png)
