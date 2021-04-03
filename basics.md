@@ -52,3 +52,16 @@ You can choose synchronous (at the same time as the changes to the main database
 ![image](https://user-images.githubusercontent.com/37074584/113472647-3a515480-9482-11eb-9dd0-7dffee6dded8.png)
 
 
+
+**Sharding or Data Partitioning: **
+Replication of data solves the availability issue but it doesn’t solve the throughput and latency issues (speed). 
+
+
+
+
+
+
+
+
+
+
