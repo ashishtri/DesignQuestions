@@ -1,6 +1,6 @@
-                                                                       **Common System Design Concepts**
+                                                                   **Common System Design Concepts**
                                                                        
-**h1.Load Balancer:**
+**Load Balancer:**
 In a system, a server has a certain amount of capacity to handle the load or request from users. If a server receives a lot of requests simultaneously more than it’s capacity than the throughput of the server gets reduced and it can slow down. Also, it can be failed (no availability) if it continues for a longer period. You can add more servers (**horizontal scaling)** and resolve this issue by distributing the number of requests among these servers. Now the question is who is going to take ownership of distributing the request and balancing the load. Who is going to decide which request should be allocated to which server to ease the burden of a single server? Here comes the role of the load balancer. 
 
 A load balancer’s job is to distribute traffic to many different servers to help with **throughput, performance, latency, and scalability.** You can put the load balancer in front of the clients (it can be also inserted to other places) and then the load balancer will route the incoming request across multiple web servers. In short, load balancers are traffic managers and they take responsibility for the availability and throughput of the system. Nginx, Cisco, TP-Link, Barracuda, Citrix, Elastic Load Balancing from AWS…these are some popular load balancers available in the market. 
