@@ -53,9 +53,10 @@ You can choose synchronous (at the same time as the changes to the main database
 
 
 
-**Sharding or Data Partitioning: **
-Replication of data solves the availability issue but it doesn’t solve the throughput and latency issues (speed). 
+**Sharding or Data Partitioning:**
 
+Replication of data solves the availability issue but it doesn’t solve the throughput and latency issues (speed). 
+In those cases, you need to shard your database which simply means ‘chunking down’ or partitioning your data records and storing those records across multiple machines. So sharding data breaks your huge database into smaller databases. 
 
 
 
