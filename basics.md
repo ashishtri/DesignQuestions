@@ -1,6 +1,8 @@
                                                                **Common System Design Concepts**
-                                                                       
-                                                                       
+
+
+
+
     Load Balancer:
 
 In a system, a server has a certain amount of capacity to handle the load or request from users. If a server receives a lot of requests simultaneously more than it’s capacity than the throughput of the server gets reduced and it can slow down. Also, it can be failed (no availability) if it continues for a longer period. You can add more servers (**horizontal scaling)** and resolve this issue by distributing the number of requests among these servers. Now the question is who is going to take ownership of distributing the request and balancing the load. Who is going to decide which request should be allocated to which server to ease the burden of a single server? Here comes the role of the load balancer. 
